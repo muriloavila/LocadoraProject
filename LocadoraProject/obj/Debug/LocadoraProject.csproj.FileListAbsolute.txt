@@ -1,0 +1,11 @@
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\bin\Debug\LocadoraProject.exe.config
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\bin\Debug\dblocadora.mdf
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\bin\Debug\dblocadora_log.ldf
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\bin\Debug\LocadoraProject.exe
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\bin\Debug\LocadoraProject.pdb
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.csprojResolveAssemblyReference.cache
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.Form1.resources
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.Properties.Resources.resources
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.csproj.GenerateResource.Cache
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.exe
+c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.pdb

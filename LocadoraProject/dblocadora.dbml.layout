@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dblocadora">
+  <DataContextMoniker Name="/dblocadoraDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ca99e537-f870-4883-9d1c-cbefe6a2b9cb" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dblocadoraDataContext/tabAdm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba057006-f6a6-4dcc-a008-ded43e9fa376" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c61d660c-f412-4a11-97a9-dde4e8ce1e27" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dblocadoraDataContext/tabDvd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5eb697e-4a07-4a40-82fb-a8b317e7a4c3" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31dd218d-2cd0-4322-8108-819da9833bab" absoluteBounds="0.75, 3.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dblocadoraDataContext/tabCliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8b99dbf-b1ff-4be4-ab0f-d95d75bdde44" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
