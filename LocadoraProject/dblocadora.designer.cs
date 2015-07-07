@@ -33,12 +33,12 @@ namespace LocadoraProject
     partial void InserttabAdm(tabAdm instance);
     partial void UpdatetabAdm(tabAdm instance);
     partial void DeletetabAdm(tabAdm instance);
-    partial void InserttabDvd(tabDvd instance);
-    partial void UpdatetabDvd(tabDvd instance);
-    partial void DeletetabDvd(tabDvd instance);
     partial void InserttabCliente(tabCliente instance);
     partial void UpdatetabCliente(tabCliente instance);
     partial void DeletetabCliente(tabCliente instance);
+    partial void InserttabDvd(tabDvd instance);
+    partial void UpdatetabDvd(tabDvd instance);
+    partial void DeletetabDvd(tabDvd instance);
     #endregion
 		
 		public dblocadoraDataContext() : 
@@ -79,19 +79,19 @@ namespace LocadoraProject
 			}
 		}
 		
-		public System.Data.Linq.Table<tabDvd> tabDvds
-		{
-			get
-			{
-				return this.GetTable<tabDvd>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tabCliente> tabClientes
 		{
 			get
 			{
 				return this.GetTable<tabCliente>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tabDvd> tabDvds
+		{
+			get
+			{
+				return this.GetTable<tabDvd>();
 			}
 		}
 	}
@@ -110,7 +110,7 @@ namespace LocadoraProject
 		
 		private string _login;
 		
-		private System.Data.Linq.Binary _senha;
+		private string _senha;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -124,7 +124,7 @@ namespace LocadoraProject
     partial void OnemailChanged();
     partial void OnloginChanging(string value);
     partial void OnloginChanged();
-    partial void OnsenhaChanging(System.Data.Linq.Binary value);
+    partial void OnsenhaChanging(string value);
     partial void OnsenhaChanged();
     #endregion
 		
@@ -133,7 +133,7 @@ namespace LocadoraProject
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -213,8 +213,8 @@ namespace LocadoraProject
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary senha
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarChar(MAX)")]
+		public string senha
 		{
 			get
 			{
@@ -229,164 +229,6 @@ namespace LocadoraProject
 					this._senha = value;
 					this.SendPropertyChanged("senha");
 					this.OnsenhaChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tabDvd")]
-	public partial class tabDvd : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _nome;
-		
-		private System.Nullable<int> _ano;
-		
-		private string _genero;
-		
-		private System.Data.Linq.Binary _capa;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnnomeChanging(string value);
-    partial void OnnomeChanged();
-    partial void OnanoChanging(System.Nullable<int> value);
-    partial void OnanoChanged();
-    partial void OngeneroChanging(string value);
-    partial void OngeneroChanged();
-    partial void OncapaChanging(System.Data.Linq.Binary value);
-    partial void OncapaChanged();
-    #endregion
-		
-		public tabDvd()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(50)")]
-		public string nome
-		{
-			get
-			{
-				return this._nome;
-			}
-			set
-			{
-				if ((this._nome != value))
-				{
-					this.OnnomeChanging(value);
-					this.SendPropertyChanging();
-					this._nome = value;
-					this.SendPropertyChanged("nome");
-					this.OnnomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ano", DbType="Int")]
-		public System.Nullable<int> ano
-		{
-			get
-			{
-				return this._ano;
-			}
-			set
-			{
-				if ((this._ano != value))
-				{
-					this.OnanoChanging(value);
-					this.SendPropertyChanging();
-					this._ano = value;
-					this.SendPropertyChanged("ano");
-					this.OnanoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genero", DbType="VarChar(50)")]
-		public string genero
-		{
-			get
-			{
-				return this._genero;
-			}
-			set
-			{
-				if ((this._genero != value))
-				{
-					this.OngeneroChanging(value);
-					this.SendPropertyChanging();
-					this._genero = value;
-					this.SendPropertyChanged("genero");
-					this.OngeneroChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_capa", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary capa
-		{
-			get
-			{
-				return this._capa;
-			}
-			set
-			{
-				if ((this._capa != value))
-				{
-					this.OncapaChanging(value);
-					this.SendPropertyChanging();
-					this._capa = value;
-					this.SendPropertyChanged("capa");
-					this.OncapaChanged();
 				}
 			}
 		}
@@ -465,7 +307,7 @@ namespace LocadoraProject
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -641,6 +483,164 @@ namespace LocadoraProject
 					this._ultimoLogin = value;
 					this.SendPropertyChanged("ultimoLogin");
 					this.OnultimoLoginChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tabDvd")]
+	public partial class tabDvd : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _nome;
+		
+		private System.Nullable<int> _ano;
+		
+		private string _genero;
+		
+		private System.Data.Linq.Binary _capa;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnnomeChanging(string value);
+    partial void OnnomeChanged();
+    partial void OnanoChanging(System.Nullable<int> value);
+    partial void OnanoChanged();
+    partial void OngeneroChanging(string value);
+    partial void OngeneroChanged();
+    partial void OncapaChanging(System.Data.Linq.Binary value);
+    partial void OncapaChanged();
+    #endregion
+		
+		public tabDvd()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(50)")]
+		public string nome
+		{
+			get
+			{
+				return this._nome;
+			}
+			set
+			{
+				if ((this._nome != value))
+				{
+					this.OnnomeChanging(value);
+					this.SendPropertyChanging();
+					this._nome = value;
+					this.SendPropertyChanged("nome");
+					this.OnnomeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ano", DbType="Int")]
+		public System.Nullable<int> ano
+		{
+			get
+			{
+				return this._ano;
+			}
+			set
+			{
+				if ((this._ano != value))
+				{
+					this.OnanoChanging(value);
+					this.SendPropertyChanging();
+					this._ano = value;
+					this.SendPropertyChanged("ano");
+					this.OnanoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genero", DbType="VarChar(50)")]
+		public string genero
+		{
+			get
+			{
+				return this._genero;
+			}
+			set
+			{
+				if ((this._genero != value))
+				{
+					this.OngeneroChanging(value);
+					this.SendPropertyChanging();
+					this._genero = value;
+					this.SendPropertyChanged("genero");
+					this.OngeneroChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_capa", DbType="Image", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary capa
+		{
+			get
+			{
+				return this._capa;
+			}
+			set
+			{
+				if ((this._capa != value))
+				{
+					this.OncapaChanging(value);
+					this.SendPropertyChanging();
+					this._capa = value;
+					this.SendPropertyChanged("capa");
+					this.OncapaChanged();
 				}
 			}
 		}

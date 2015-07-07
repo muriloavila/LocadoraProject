@@ -2,25 +2,16 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\dblocadora.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="LocadoraProject.Properties.Settings" SettingsPropertyName="dblocadoraConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tabAdm" Member="tabAdms">
     <Type Name="tabAdm">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="senha" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tabDvd" Member="tabDvds">
-    <Type Name="tabDvd">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="genero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="capa" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="senha" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tabCliente" Member="tabClientes">
     <Type Name="tabCliente">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="telefone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -29,6 +20,15 @@
       <Column Name="senha" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="ultimoFilme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="ultimoLogin" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tabDvd" Member="tabDvds">
+    <Type Name="tabDvd">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="genero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="capa" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
 </Database>

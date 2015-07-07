@@ -9,3 +9,7 @@ c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraPr
 c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.csproj.GenerateResource.Cache
 c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.exe
 c:\users\murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.pdb
+C:\Users\Murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.frmAdmPrincipal.resources
+C:\Users\Murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.frmClientePrincipal.resources
+C:\Users\Murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.frmItemDesc.resources
+C:\Users\Murilo\documents\visual studio 2013\Projects\LocadoraProject\LocadoraProject\obj\Debug\LocadoraProject.frmClientes.resources
